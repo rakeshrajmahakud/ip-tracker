@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+:root{
+    --prim-col : #fff;
+    --second-col : #000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+}
+
+
+.heading{
+    color: var(--prim-col);
+    font-size: 1.8rem;
+    text-shadow: 3px 3px 5px var(--second-col);
+}
+
+.header{
+    background-image: url('./pattern-bg.png');
+    background-size:cover;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.search-container{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin-top: 1rem;
+    
+}
+
+.search-container input{
+    font-weight:400;
+    line-height: 1.5;
+    font-size: x-large;
+}
+
+.search-container .input-ip{
+    outline: 0;
+    border: 0;
+    border-radius: 10px 0 0 10px;
+    padding: 10px 20px;
+    width: 100%;
+    margin-right: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.search-container .arrow-icon{
+    border-radius: 0 10px 10px 0;
+    background-color: var(--second-col);
+    color: var(--prim-col);
+    height: 56px;
+    width: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    cursor: pointer;
+}
+
+.arrow-icon:hover{
+    background-color:rgb(123, 3, 179);
+}
+
+.info-box{
+    position:absolute;
+    z-index: 1;
+    top: 220px;
+    width: 80%;
+    min-height: 150px;
+    background-color: var(--prim-col);
+    border-radius: 10px;
+    left: 10%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 5px;
+    align-items: center;
+    flex-wrap: wrap;
+    pointer-events: none;
+
+}
+
+.head-info{
+    text-align: center;
+    opacity: 50%;
+    padding: 5px;
+}
+
+.desc{
+    font-size: 1.5rem;
+    margin-top: 20px;
+    text-align: center;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+#map{
+    height: 65vh;
+    position: relative;
+    z-index: 0;
+}
