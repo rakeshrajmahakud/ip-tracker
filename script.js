@@ -9,22 +9,28 @@ btn.addEventListener('click',()=>{
     appdata()
 })
 
+appdata()
+
 async function appdata(){
-    let data = await fetch(`http://ip-api.com/json/${inputBox.value}`)
+   
+   
+    let data = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_8FYAO0MwwTip5cThbw4NOn1nrEWmJ&ipAddress=${inputBox.value}`)
     // let data = await fetch(`http://ip-api.com/json/${inputBox.value}?fields=status,message,continent,continentCode,country,countryCode,region,regionName,city,district,zip,lat,lon,timezone,currency,isp,org,as,query`)
     let mydata =  await data.json();
     console.log(mydata);
-    console.log(mydata.city);
+    // console.log(mydata.ip);
+    // console.log(mydata.isp);
+
     displayInfo(mydata);
 }
 
 function displayInfo(mydata) {
-    ip.innerHTML = mydata.query;
-    loc.innerHTML = mydata.city;
-    timezone.innerHTML = mydata.timezone;
+    ip.innerHTML = mydata.ip;
+    loc.innerHTML = mydata.location.city;
+    timezone.innerHTML = mydata.location.timezone;
     isp.innerHTML = mydata.isp;
-    let lat = mydata.lat;
-    let long = mydata.lon;
+    let lat = mydata.location.lat;
+    let long = mydata.location.lng;
     showMap(lat,long)    
 }
 
