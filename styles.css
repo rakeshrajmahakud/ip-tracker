@@ -77,7 +77,7 @@ body{
 .info-box{
     position:absolute;
     z-index: 1;
-    top: 220px;
+    top: 200px;
     width: 80%;
     min-height: 150px;
     background-color: var(--prim-col);
